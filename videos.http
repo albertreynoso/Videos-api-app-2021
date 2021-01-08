@@ -1,0 +1,26 @@
+@api = http://localhost:5000
+
+
+GET {{api}}/videos
+###
+GET {{api}}/videos/5ff7835f9e6adb27908a3c7f
+### Create a video
+POST {{api}}/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=UC_FOwReDBg&list=PLDisKgcnAC4SUlB2RB2uyTDel-5HhC1np&index=22",
+    "title": "fazt video",
+    "description": "this is a fazt video"
+}
+
+###
+DELETE {{api}}/videos/5ff7835f9e6adb27908a3c7f
+###
+//mongoose's method findById casts the id parameter to the type of model's _id field so that it can properly query for the matching doc. "5ff37d0e8af4ac2ae815a20f" is an objectId but "foo" o another thing is not a valid object so the cast fails 
+PUT {{api}}/videos/5ff7835f9e6adb27908a3c7f
+content-type: application/json
+
+{
+    "description": "Ya estoy listo para hacer cosas maravillosas"
+}
