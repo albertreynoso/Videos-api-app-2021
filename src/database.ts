@@ -14,7 +14,7 @@ import config from "./config";
       // pass: config.MONGO_PASSWORD
     };
     const db = await mongoose.connect(
-      `mongodb://${config.MONGO_HOST}/${config.MONGO_DATABASE}`,
+      "mongodb+srv://Alberto-2021:Alberto11225192116@cluster0.rehhj.mongodb.net/mern-db?retryWrites=true&w=majority",
       mongooseOptions
     );
     console.log("database is connected to: ", db.connection.name);
